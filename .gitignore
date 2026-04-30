@@ -1,0 +1,14 @@
+# Ignore large data formats
+*.gpkg
+*.xlsx
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+# QGIS backup/lock files
+*.qgz.local
+*.qgz~
+# Quarto/RMarkdown outputs
+*_files/
+*_cache/
+.quarto/
