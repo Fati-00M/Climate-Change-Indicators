@@ -1,31 +1,36 @@
-# Pakistan Climate Change Indicators: Fire Activity Analysis
+# Pakistan Climate Change Indicators: Fire & Deforestation Analysis
 
-This repository provides an interactive visualization of climate change markers in Pakistan, specifically focusing on satellite-detected thermal anomalies (fires) and forest canopy changes.
+An interactive data visualization portfolio monitoring environmental impact markers in Pakistan using satellite data and automated Python workflows.
 
-### 📍 [View Live Interactive Map](https://fati-00m.github.io/Climate-Change-Indicators/)
+### 📍 Live Dashboards
+*   [**Main Dashboard: Active Fire Alerts**](https://fati-00m.github.io/Climate-Change-Indicators/) – *Comparing historical archives with recent satellite detections.*
+*   [**Deep Dive: Deforestation Analysis**](https://fati-00m.github.io/Climate-Change-Indicators/deforestation.html) – *Visualizing canopy loss using the Hansen Global Forest Change dataset.*
 
 ---
 
 ## 🛠 Project Overview
-This project automates the processing of environmental satellite data to identify "big fires" and areas of significant deforestation. By visualizing these indicators, we can better understand the environmental pressures facing various provinces in Pakistan.
+This project bridges the gap between raw satellite data and actionable environmental insights. By automating the data pipeline, we can monitor critical climate markers across Pakistan's provinces without manual GIS software intervention.
 
-### Data Sources
-*   **FIRMS (VIIRS Satellite):** Thermal anomalies and active fire data.
-*   **Hansen Global Forest Change:** Canopy cover loss data (processed via Google Earth Engine).
-*   **Local Records:** Province-level historical fire archives.
+### Core Objectives
+*   **Fire Monitoring:** Using the **FIRMS (VIIRS Satellite) API** to track thermal anomalies. We apply specific thresholds to `brightness` and `frp` (Fire Radiative Power) to isolate confirmed large-scale fires.
+*   **Forest Loss:** Visualizing **Hansen Global Forest Change** data (sourced via Google Earth Engine) to identify areas where canopy cover has dropped significantly (threshold set to >30% canopy).
 
-## 🚀 Technical Workflow
-1.  **Data Extraction:** Automated retrieval of fire alerts using the FIRMS API.
-2.  **Filtering:** Applying thresholds to `brightness`, `bright_t31`, and `frp` (Fire Radiative Power) to isolate confirmed large-scale fires.
-3.  **Visualization:** Data is processed via **Python (Pandas)** and rendered into an interactive web interface using **Folium**.
-4.  **Deployment:** Hosted via GitHub Pages for public access and portfolio demonstration.
+## 🚀 Technical Stack
+*   **Language:** Python 3.10
+*   **Data Science:** Pandas (Data cleaning and NaN handling)
+*   **Geospatial:** Folium & FastMarkerCluster (Web-based mapping)
+*   **Environment:** Conda (Managing geospatial dependencies)
+*   **Deployment:** GitHub Pages (Automated web hosting)
 
 ## 📂 Repository Structure
-*   `index.html`: The generated interactive map.
-*   `qgis_code.py`: Python script used to process CSVs and generate the map.
-*   `fire_archive_province.csv`: Historical province-level fire data.
-*   `recent_fire_pts.csv`: Latest satellite fire detections.
+*   `index.html`: Main interactive map for fire alerts.
+*   `deforestation.html`: Standalone map for forest loss analysis.
+*   `qgis_code.py`: Script for processing fire archives and recent alerts.
+*   `deforestation.py`: Dedicated script for the Hansen dataset visualization.
+*   `fire_archive_province.csv`: Historical province-level data.
+*   `recent_fire_pts.csv`: Current thermal anomaly detections.
+*   `Copy of deforestation_by_location.csv`: Geospatial forest loss coordinates.
 
 ## 👤 Author
 **Fati-00M**
-Student focused on Business and Social Science | GIS & Data Analysis Portfolio
+*Business & Social Science Student | Data Analysis & GIS Portfolio*
