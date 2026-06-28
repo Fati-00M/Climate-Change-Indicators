@@ -34,13 +34,17 @@ This climate change indicator needed data from Google Earth Engine. I made an in
 *   **Deployment:** GitHub Pages (Automated web hosting)
 
 ##  Repository Structure
-*   `index.html`: Main interactive map for fire alerts.
+*   `index.html`: Interactive dashboard for multi-year fire alerts (2018-2026).
+*   `index_folium_backup.html`: Original Folium-generated map (backup).
+*   `index.css`: Glassmorphic layout styling and dark mode rules.
+*   `dashboard.js`: Frontend filtering, map rendering, and Chart.js integration.
+*   `data.js`: Compiled, unified fire data containing coordinates and indicators.
+*   `generate_data.py`: Data-compiler script mapping archives (2018-2025) and NRT data (2026) to a compact format.
 *   `deforestation.html`: Standalone map for forest loss analysis.
 *   `qgis_code.py`: Script for processing fire archives and recent alerts.
 *   `deforestation.py`: Dedicated script for the Hansen dataset visualization.
 *   `fire_archive_province.csv`: Historical province-level data.
 *   `recent_fire_pts.csv`: Current thermal anomaly detections.
-*   `Copy of deforestation_by_location.csv`: Geospatial forest loss coordinates.
 
 ## 👤 Author
 **Fati-00M**
